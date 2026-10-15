@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmjson"
+version = "0.1.0"
+description = "Extract and repair JSON from messy LLM output: markdown fences, <think> tags, prose, trailing commas, truncation. Zero dependencies."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Yi-111-a" }]
+requires-python = ">=3.9"
+keywords = ["llm", "json", "json-repair", "structured-output", "parser", "cli", "agents"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+  "Topic :: Text Processing",
+  "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://github.com/Yi-111-a/llmjson"
+Issues = "https://github.com/Yi-111-a/llmjson/issues"
+
+[project.scripts]
+llmjson = "llmjson.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+llmjson = ["py.typed"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

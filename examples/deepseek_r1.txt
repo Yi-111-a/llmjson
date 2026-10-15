@@ -1,0 +1,18 @@
+<think>
+The user wants the cities as JSON. Maybe {"cities": ["Paris"]}? No, they asked for three,
+and I should include the country too.
+</think>
+
+Sure! Here are three cities:
+
+```json
+{
+  "cities": [
+    {"name": "Paris", "country": "FR"},
+    {"name": "Kuala Lumpur", "country": "MY"},
+    {"name": "Lima", "country": "PE"},
+  ],
+}
+```
+
+Let me know if you need more.

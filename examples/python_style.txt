@@ -1,0 +1,2 @@
+Result (as a Python dict, sorry): {'ok': True, 'error': None, 'tags': ['a', 'b',], # trailing comma
+}
